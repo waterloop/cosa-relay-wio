@@ -1,11 +1,19 @@
 # cosa-relay-wio
 
-This is a `wio` package for
-- platform(s): avr
-- framework(s): cosa
+This is a relay controller for Cosa. Example usage:
 
-To include this package as a dependency:
+```cpp
+void setup() {
+  using wlp::RelayController;
+  RelayController controller{Board::DigitalPin::D5};
 
-```bash
-wio install cosa-relay-wio
+  controller.high();
+  delay(1000);
+  controller.low();
+}
+```
+
+## To use this package (wio >= 0.10.0):
+```
+wio install cosa-relay-wio@1.0.0 --url github.com/waterloop/cosa-relay-wio
 ```

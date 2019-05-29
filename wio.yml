@@ -2,7 +2,7 @@ type: pkg
 
 project:
   name: cosa-relay-wio
-  version: 0.0.1
+  version: 1.0.0
   keywords:
   - wio
   - pkg
