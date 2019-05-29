@@ -1,0 +1,10 @@
+dist: trusty
+
+before-install:
+    - sudo apt-get update -qq
+install:
+    - sudo apt-get install -qq gcc-avr avr-libc avrdude -y
+    - curl -sfL https://install.goreleaser.com/github.com/wio/wio.sh | sh
+    - export PATH=$PATH:./bin
+script:
+    - wio build
