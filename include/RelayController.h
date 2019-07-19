@@ -12,7 +12,7 @@ class RelayController {
       : m_pin{pin} {}
 
   /**
-   * Set the relay pin.
+   * Set the relay pin high.
    * @note atomic
    */
   void high();
@@ -24,7 +24,7 @@ class RelayController {
   void low();
 
   /**
-  * Set the relay pin
+  * Turn on the relay pin
   * @note atomic
   */
   void on();
@@ -36,25 +36,25 @@ class RelayController {
   void off();
 
   /**
-  * Return true(1) if the relay is set otherwise true(0).
+  * Return true(1) if the relay is on otherwise false(0).
   * @return boolean.
   */
   bool is_on();
 
   /**
-  * Return true(1) if the relay is set otherwise false(0).
+  * Return true(1) if the relay is off otherwise false(0).
   * @return boolean.
   */
   bool is_off();
 
   /**
-  * Return true(1) if the relay is set otherwise true(0).
+  * Return true(1) if the relay is set otherwise false(0).
   * @return boolean.
   */
   bool is_high();
 
   /**
-  * Return true(1) if the relay is set otherwise false(0).
+  * Return true(1) if the relay is cleared (low) otherwise false(0).
   * @return boolean.
   */
   bool is_low();
