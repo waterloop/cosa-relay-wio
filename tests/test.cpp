@@ -6,7 +6,7 @@
 
 using wlp::RelayController;
 
-RelayController controller{Board::DigitalPin::D5};
+RelayController controller{Board::DigitalPin::D2};
 
 void setup() {
   uart.begin(9600);
@@ -17,7 +17,11 @@ void setup() {
 }
 
 void loop() {
+  //on high the brakes open, on low the brakes close
   controller.high();
+  trace << PSTR("CONTROLLER HIGH\n");
   delay(1000);
   controller.low();
+  trace << PSTR("CONTROLLER LOW\n");
+  delay(1000);
 }

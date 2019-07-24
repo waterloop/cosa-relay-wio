@@ -16,4 +16,3 @@ targets:
     platform: avr
     framework: cosa
     board: mega2560
-
